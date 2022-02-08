@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+body,
+html {
+    /* height: 100%; */
+    background-image: linear-gradient(darkslategrey, darkolivegreen );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: Calibri;
+}
+
+#main {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#foodCalcu {
+    margin: 0;
+    /* padding: 0.3rem; */
+    color: white;
+    font-size: 2.3rem;
+    font-family: Rowdies;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding-top: 15rem;
+    text-shadow: 2px 2px 3px black;
+}
+
+#desc {
+    color: darkkhaki;
+    margin-top: 0;
+    padding: 1rem;
+}
+
+#inputDiv {
+    padding-bottom: 2rem;
+}
+
+#input,
+#factsBtn,
+#addBtn {
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0.2rem;
+}
+
+#input {
+    width: 20rem;
+    border: 2px black;
+    border-radius: .8rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px black;
+}
+
+#factsBtn {
+    opacity: 1;
+    background-color: yellowgreen;
+    color: darkgreen;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px black;
+    border-radius: .8rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+}
+
+#addBtn {
+    opacity: 1;
+    background-color: yellowgreen;
+    color: white;
+    padding: .9rem .9rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px black;
+    border-radius: .8rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+}
+
+#deleteBtn {
+    opacity: 1;
+    background-color: olive;
+    color: white;
+    padding: .8rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: inline-block;
+    border: 2px black;
+    border-radius: .8rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+}
+
+#factsBtn:is(:hover, :focus-visible) {
+    background-color: darkorange;
+    color: black;
+    outline: 0;
+}
+
+#addBtn:is(:hover, :focus-visible) {
+    background-color: darkorange;
+    color: black;
+    outline: 0;
+}
+
+#deleteBtn:is(:hover, :focus-visible) {
+    background-color: darkorange;
+    color: black;
+    outline: 0;
+}
+
+#factsTable {
+    margin: auto;
+    padding: 1.3rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#factsTable td, #factsTable th {
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+#factsTable th {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: darkslategrey;
+    color: white;
+}
+
+#factsTable tr:nth-child(even){background-color: darkgray;}
+#factsTable tr:nth-child(odd){background-color: lightgrey;}
+
+#factsTable tr:hover {background-color: lightgreen;}
+
+
+#foodName {
+    font-size: 2rem;
+    text-transform: capitalize;
+    /* padding: 1rem; */
+    margin: 0.2rem;
+    color: whitesmoke;
+}
+
+#totalCalories {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    color: lightsteelblue;
+}
+
+#intake {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: darkkhaki;
+}
+
+#legend {
+    color:darksalmon;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+}
+
+#addDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 20rem;
+    margin: auto;
+}
+
+#addedFood,
+#total {
+    font-family: Calibri;
+    
+}
+#listTable {
+    display: none;
+    color:lightsteelblue;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#listTable th {
+    color: cadetblue;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    padding: 8px;
+    text-shadow: 1px 1px 3px black;
+    /* background-color: lightgray; */
+}
+
+#listTable td {
+    text-transform: capitalize;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 8px;
+}
+/* 
+#listTable tr:nth-child(even){background-color: darkolivegreen;}
+#listTable tr:nth-child(odd){background-color: darkslategrey;} */
+
+#listTable tr:hover {background-color: lightslategray;}
+
+#textAdded {
+    display: none;
+    font-size: 1.5rem;
+    color:darkkhaki;
+    text-shadow: 2px 2px 3px black;
+}
+
+
+#total {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color:lightgray;
+    text-shadow: 2px 2px 3px black;
+}

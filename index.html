@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Nutrient Facts</title>
+</head>
+<body>
+    <main id="main">
+        <h2 id="foodCalcu">Food Calculator - Nutrient Facts</h2>
+        <h3 id="desc">Get the nutrient facts for over 30,000 food and drinks. And add them to your total Daily Totals to see how your calories add up!</h3>
+        <div id="inputDiv">
+            <input id="input" type="text"/>
+            <button id="factsBtn">Get Nutrition Facts</button>
+            <button id="addBtn">➕</button>
+            <button id="deleteBtn">↺</button>   
+        </div>
+        <div id="nutritionFacts"></div>
+        <div id="addDiv">
+            <h3 id="textAdded">Added Foods:</h3>
+            <div id="addedFood">
+                <table id="listTable">
+                    <th>Food</th>
+                    <th>Calorie Count</th>
+                </table>
+            </div>
+            <div id="total"></div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
