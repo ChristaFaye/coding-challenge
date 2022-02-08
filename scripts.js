@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
      // function calling fetch api to call Add Food function
      function addFood() {
-        alert("Food added to your daily calories count!");
+        
         const inputText = document.getElementById("input").value;
         // console.log(inputText);
          fetch(`https://nutrition-by-api-ninjas.p.rapidapi.com/v1/nutrition?query=${inputText}`, {
@@ -190,13 +190,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function arrayAddFood(facts) {
-        // alert("Food added to your daily calorie count!");
+        alert("Food added to your daily calorie count!");
          // variable for api data
-         let foodFact = facts[0];
-         let foodName = foodFact.name;
-         let serving = foodFact.serving_size_g;
-         let calories = foodFact.calories;
-         let sum = 0;
+        let foodFact = facts[0];
+        let foodName = foodFact.name;
+        let serving = foodFact.serving_size_g;
+        let calories = foodFact.calories;
+        let sum = 0;
         
         const total = document.getElementById("total");
         const textAdded = document.getElementById("textAdded");
