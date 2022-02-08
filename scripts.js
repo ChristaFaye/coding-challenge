@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // trigger add food function
     addBtn.addEventListener("click", function () {
         addFood();
+        alert("Food added to your daily calorie count!");
     });
 
     // refresh page to remove array items
@@ -190,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function arrayAddFood(facts) {
-        alert("Food added to your daily calorie count!");
+        
          // variable for api data
         let foodFact = facts[0];
         let foodName = foodFact.name;
