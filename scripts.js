@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
      // function calling fetch api to call Add Food function
      function addFood() {
+        confirm("Food added to your daily calories count!");
         const inputText = document.getElementById("input").value;
         // console.log(inputText);
          fetch(`https://nutrition-by-api-ninjas.p.rapidapi.com/v1/nutrition?query=${inputText}`, {
