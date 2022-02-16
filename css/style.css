@@ -193,6 +193,7 @@ body {
     color:lightsteelblue;
     border-collapse: collapse;
     width: 100%;
+    max-width: 50rem;
 }
 
 #listTable th {
