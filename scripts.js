@@ -8,6 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const foodCalcu = document.getElementById("foodCalcu");
     const desc = document.getElementById("desc");
     const arrayFood = [];
+    const chatText = document.getElementById("chatText");
+    const message = document.getElementById("message");
+    const answer = document.getElementById("answer");
+    
+    const openBtn = document.getElementById("openBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const sendBtn = document.getElementById("sendBtn");
 
     // trigger fetch function by click event getting nutrition facts
     factsBtn.addEventListener("click", function () {
@@ -25,6 +32,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // refresh page to remove array items
     deleteBtn.addEventListener("click", function () {
         location.reload();
+    });
+
+    //chatbot open button
+    openBtn.addEventListener("click",  function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    });
+
+    //chatbot close button
+    closeBtn.addEventListener("click",  function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    });
+
+    //chatbot send button
+     sendBtn.addEventListener("click",  function () {
+        postApi(chatText);
+        chatText.value = "";
     });
 
     // function calling fetch api to call get nutrition facts function
@@ -58,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "x-rapidapi-host": "nutrition-by-api-ninjas.p.rapidapi.com",
                 "x-rapidapi-key": "5c19919ce6mshdb72b57cccae029p1686bdjsn086cd04caec1"
             },
-        })
+         })
             .then((response) => response.json())
             .then((obj) => {
                 arrayAddFood(obj);
@@ -225,7 +248,31 @@ document.addEventListener("DOMContentLoaded", function () {
         
     }
 
+    function postApi(chatText) {
+        var chatMessage = chatText.value;
+        console.log(chatMessage);
+        const data = `message=hello&language=en&context=%5B%22array%20of%20the%20previous%20messages%22%5D%20`;
 
-   
+        const xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                console.log(this.responseText);
+                response = JSON.parse(this.responseText);
+                message.style = "display: block;"
+                message.innerHTML = `<p>${chatMessage}</p>`
+                setTimeout(() => {answer.innerHTML =  `<p>${response.message}</p>`}, 500);
+                answer.style = "display: block;"
+            }
+        });
+
+        xhr.open("POST", "https://chatbot19.p.rapidapi.com/chatbot");
+        xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("x-rapidapi-host", "chatbot19.p.rapidapi.com");
+        xhr.setRequestHeader("x-rapidapi-key", "09300dae33mshb051cc30284f490p1fbec4jsnd15d572cbbf1");
+
+        xhr.send(data);
+    }
 
 });

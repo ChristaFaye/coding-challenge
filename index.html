@@ -27,6 +27,24 @@
             </div>
             <div id="total"></div>
         </div>
+
+        <!-- Chatbot -->
+        <button id="openBtn" class="open-button blink">Chat Us!</button>
+
+        <div class="chat-popup" id="myForm">
+            <form class="form-container">
+                <h1>Chat</h1>
+                
+               
+                <!-- <textarea id="chatText" placeholder="Type message.." name="msg" required></textarea> -->
+                <div id="message"></div>
+                <div id="answer"></div>
+                <!-- <label><b>Message</b></label> -->
+                <input type="text" id="chatText" placeholder="Type message.." required/>
+                <button type="button" id="sendBtn" class="btn">Send</button>
+                <button type="button" id ="closeBtn" class="btn cancel">Close</button>
+            </form>
+        </div>
     </main>
 
     <script src="scripts.js"></script>
